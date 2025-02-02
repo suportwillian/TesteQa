@@ -20,3 +20,8 @@ Realizar requisição PUT
     [Arguments]    ${endpoint}    ${id}    ${json}    ${status}
     ${resposta}=    PUT    ${url}/${endpoint}/${id}    ${json}    ${status}
     Set Global Variable    ${resposta}
+
+Realizar requisição DELETE por ID
+    [Arguments]    ${endpoint}    ${parametro}
+    ${resposta}=    DELETE    ${url}/${endpoint}/${parametro}
+    Set Global Variable    ${resposta}
