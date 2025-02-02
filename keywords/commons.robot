@@ -10,3 +10,8 @@ Realizar requisição POST
     [Arguments]    ${endpoint}    ${json}    ${status}
     ${resposta}=    POST    ${url}/${endpoint}    ${json}    ${status}
     Set Global Variable    ${resposta}
+
+Realizar requisição GET por ID
+    [Arguments]    ${endpoint}    ${parametro}
+    ${resposta}=    GET    ${url}/${endpoint}/${parametro}
+    Set Global Variable    ${resposta}
